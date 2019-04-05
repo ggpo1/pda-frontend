@@ -1,4 +1,4 @@
-# eaist-emulator
+# PDA - frontend
 
 ## Project setup
 ```
