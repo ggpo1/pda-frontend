@@ -1,0 +1,22 @@
+version: '2'
+services:
+  mock-backend:
+    image: docker.perfema.com/sc44/eaist-emulator:latest
+    ports:
+    - "8092:80"
+    links:
+    - mock-backend
+    restart: unless-stopped
+    logging:
+      driver: syslog
+      options:
+        tag: "{{.Name}}"
+  mock-backend:
+    image: docker.perfema.com/sc44/mock-backend:latest
+    ports:
+    - "5000"
+    restart: unless-stopped
+    logging:
+      driver: syslog
+      options:
+        tag: "{{.Name}}"

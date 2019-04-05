@@ -1,0 +1,8 @@
+{
+    "law": "44",
+    "customer": {
+        "id": "1234",
+        "name": "ГАУЗ «СП № 11 ДЗМ»"
+    },
+    "isDocOrgEq": false
+}

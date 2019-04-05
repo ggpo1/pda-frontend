@@ -1,0 +1,39 @@
+{
+    "law": "44",
+    "customer": {
+        "id": "1234",
+        "name": "ГАУЗ «СП № 11 ДЗМ»"
+    },
+    "smallVolume": "NO",
+    "subject": "Майонез 'Ряба'",
+    "subjectClass": {
+        "code": "01.01.10.04",
+        "name": "ПРОДУКЦИЯ МАЙОНЕЗНАЯ"
+    },
+    "year": "2019",
+    "limits": [
+        { 
+            "type": "FIN_ACT_PLAN",
+            "code": "244-310",
+            "total": "1000000000000000",
+            "requested": "10000000000000"
+        }
+    ],
+    "specialPurchase": "NO",
+    "goal": {
+        "type": "FUNCTION_EXECUTION",
+        "programName": "Пир на весь мир",
+        "purchaseReason": "Какой же пир без майонеза",
+        "legalActs": "Актов нет и не будет"
+    },
+    "terms": {
+        "duration": "REPEATING",
+        "beginDate": "2019-02-27T14:29:19+00:00",
+        "period": "WORKDAY",
+        "count": "5"
+    },
+    "publicDiscussion": {
+        "notApplicableDueToClosedMethod": true,
+        "notApplicableDueToSingleProvider": false
+    }
+}
