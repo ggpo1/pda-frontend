@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link> | -->
-      <!-- <router-link to="/about">About</router-link> -->
-    </div>
+    <Sidebar />
     <div class="main-wrapper">
       <router-view />
     </div>
@@ -11,7 +8,6 @@
 </template>
 
 <script lang="ts" src="./App.ts" />
->
 
 <style>
 #app {
