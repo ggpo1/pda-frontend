@@ -10,8 +10,4 @@ declare global {
       [elem: string]: any;
     }
   }
-
-  interface Window {
-    mozRequestAnimationFrame(callback: any, element?: any): void;
-  }
 }
