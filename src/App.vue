@@ -1,12 +1,17 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/">Home</router-link> | -->
+      <!-- <router-link to="/about">About</router-link> -->
     </div>
-    <router-view/>
+    <div class="main-wrapper">
+      <router-view />
+    </div>
   </div>
 </template>
+
+<script lang="ts" src="./App.ts" />
+>
 
 <style>
 #app {
@@ -27,5 +32,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.main-wrapper{
+  
 }
 </style>
