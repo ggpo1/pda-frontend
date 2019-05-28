@@ -1,31 +1,25 @@
 <template>
-    <div>
+    <div class="sidebar-wrapper">
         <router-link to="/">
-            <div>
-                Доски
-            </div>
+            <div></div>
         </router-link>
         <router-link to="/tasks">
-            <div>
-                Задачи
-            </div>
+            <div></div>
         </router-link>
         <router-link to="/books">
-            <div>
-                Книжная полка
-            </div>
+            <div></div>
         </router-link>
         <router-link to="/calendar">
-            Календарь
+            <div></div>
         </router-link>
         <router-link to="/purchases">
-            Покупки
+            <div></div>
         </router-link>
         <router-link to="/trainings">
-            Тренировки
+            <div></div>
         </router-link>
         <router-link to="/settings">
-            Настройка
+            <div></div>
         </router-link>
     </div>
 </template>
@@ -33,5 +27,12 @@
 <script lang="ts" src="./Sidebar.ts" />
 
 <style scoped>
-
+.sidebar-wrapper {
+    width: 5%;
+    padding: 10px;
+    background: #0747A6;
+}
+.sidebar-wrapper div {
+    text-align: left;
+}
 </style>
