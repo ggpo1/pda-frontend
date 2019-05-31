@@ -21,17 +21,18 @@
     padding: 10px;
     border: 1px solid #bbc1d0;
     width: 100%;
-    /* background: green; */
-
+    height: 100%;
 }
 .task-wrapper {
     margin-top: 5px;
     padding: 10px;
     text-align: left;
     border: 1px solid #bbc1d0;
+    height: auto;
 }
 .board-title {
     padding-bottom: 10px;
     border-bottom: 1px solid #bbc1d0;
+    height: auto;
 }
 </style>

@@ -15,14 +15,16 @@
 * {
   margin: 0;
   padding: 0;
+  height:  100%;
 }
 #app {
   display: flex;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  width: 60%;
+  height: auto;       /* These two lines were the key. */
+  min-height: 100%;
+  width: 100%;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -32,12 +34,13 @@
 
 .main-wrapper {
   width: 100%;
+  height: auto;
 }
 
 .center-horizontal {
   display: flex;
   justify-content: center;
-  height: 700px;
-  margin-top: 100px;
+  
+  /* margin-top: 100px; */
 }
 </style>

@@ -28,7 +28,7 @@
 
 <style scoped>
 .sidebar-wrapper {
-    width: 5%;
+    width: 2.5%;
     padding: 10px;
     background: #0747A6;
 }
