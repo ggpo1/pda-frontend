@@ -4,8 +4,9 @@
             {{ title }}
         </div>
         <div class="board-body">
-            <div v-for="(task, i) in tasksList" :key="'task_'+i" class="board-title">
-                {{ task.title }}
+            <div class="task-wrapper" v-for="(task, i) in tasksList" :key="'task_'+i">
+                {{ task.title }}<br>
+                {{ task.description }}
             </div>
         </div>
     </div>
@@ -18,7 +19,19 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background: green;
+    border: 1px solid #bbc1d0;
+    width: 100%;
+    /* background: green; */
 
+}
+.task-wrapper {
+    margin-top: 5px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #bbc1d0;
+}
+.board-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbc1d0;
 }
 </style>

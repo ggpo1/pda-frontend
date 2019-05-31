@@ -6,10 +6,13 @@ import router from '@/router';
 @Component({ components: { Board } })
 export default class Boards extends Vue {
     private todoTasks: any[] = [{
-        title: 'таска 1',
+        title: 'EAIST-1',
+        description: 'Добавить стаартовую страницу',
     }, {
-        title: 'таска 2',
+        title: 'EAIST-1',
+        description: 'Добавить стаартовую страницу',
     }, {
-        title: 'таска 3',
+        title: 'EAIST-1',
+        description: 'Добавить стаартовую страницу',
     }];
 }
