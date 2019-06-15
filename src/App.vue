@@ -16,13 +16,19 @@
   margin: 0;
   padding: 0;
 }
+
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+
 #app {
   display: flex;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  width: 60%;
+  /* height: 100%; */
+  width: 100%;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -37,7 +43,7 @@
 .center-horizontal {
   display: flex;
   justify-content: center;
-  height: 700px;
-  margin-top: 100px;
+  height: 100%;
+  /* margin-top: 100px; */
 }
 </style>

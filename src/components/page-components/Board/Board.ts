@@ -4,5 +4,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class Board extends Vue {
     @Prop({ default: '' }) public title!: string;
     @Prop() public tasksList!: any[];
+    @Prop() public boardType!: string;
 
 }

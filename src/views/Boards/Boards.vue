@@ -1,8 +1,6 @@
 <template>
   <div class="boards-wrapper">
-    <Board title="Список задач" :tasksList="todoTasks" />
-    <Board title="В работе" />
-    <Board title="Выполнено" />
+    <Board title="Список целей" boardType="goals" :tasksList="todoTasks" />
   </div>
 </template>
 
