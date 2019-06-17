@@ -9,12 +9,19 @@ import ApiGoal from '@/api/ApiGoal';
 export default class Boards extends Vue {
     private response: any;
     private todoTasks: Goal[] = [];
+    public stats: any = {
+        Total: '',
+        Work: '',
+        Done: '',
+        TotalProgress: '',
+        PersonalEfficiency: '',
+    }
      
     public async mounted() {
         // let apiGoal = new ApiGoal();
         // let goals = apiGoal.getGoals();
         // console.log(goals)
-        fetch('https://localhost:5050/api/goals', { method: 'GET' })
+        await fetch('https://localhost:5050/api/goals', { method: 'GET' })
         .then(response => response.json())
         .then((data) => {
             // this.ser(data)
@@ -22,10 +29,10 @@ export default class Boards extends Vue {
             
             this.todoTasks = data;
             // console.log(this.todoTasks)
+            
         })
-        // console.log(this.response)
-    }
-    public ser(data: any) {
-        this.response = data;
+        this.todoTasks[0].Progress = '41';
+        this.todoTasks[1].Progress = '65';
+        
     }
 }

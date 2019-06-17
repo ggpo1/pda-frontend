@@ -31,6 +31,9 @@
             {{ title }}
         </div>
         <div class="tasks-controls">
+            <div class="control" @click="goalPush">
+                Цели
+            </div>
             <div class="control" @click="addTaskBlockOpen">
                 Cоздать
             </div>
@@ -59,7 +62,10 @@
                 Оставшиеся: {{ stats.Work }}
             </div>
             <div class="stats-label">
-                Процент выполнения: {{ stats.TotalProgress*100 }}%
+                Процент выполнения: {{ getTotalProgress }}%
+            </div>
+            <div class="stats-label">
+                Эффективность: {{ getPrettyEfficiency }}
             </div>
             <div class="task-add-block-footer">
                 <!-- <button @click="addTask" class="btn btn-green">создать</button> -->
@@ -68,12 +74,15 @@
         </div>
         <div class="board-body">
             <div class="task-wrapper" v-for="(task, i) in todoList" :key="'task_'+i">
-                <div style="font-size: 14px;">
+                <div style="font-size: 14px; width: 75%">
                     {{ task.Title }}<br>
                     {{ task.Description }}
                 </div>
                 
                 <div>Приоритет: {{ task.Priority }}</div>
+                <div>
+                    <button @click="setDoneTask(task)" class="btn btn-green">выполнено</button>
+                </div>
             </div>
             <div style="padding: 10px; border-bottom: 3px solid #bbc1d0;">
                 Выполненные
@@ -198,7 +207,7 @@
 
 .task-add-block-footer > button {
     width: 30%;
-    height: 20px;
+    height: 25px;
 
 }
 
@@ -206,6 +215,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .btn-green {

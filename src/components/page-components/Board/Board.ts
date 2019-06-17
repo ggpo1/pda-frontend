@@ -24,12 +24,25 @@ export default class Board extends Vue {
         Work: '',
         Done: '',
         TotalProgress: '',
+        PersonalEfficiency: '',
+    }
+
+    public get getPrettyEfficiency() {
+        return Number.parseFloat(this.stats.PersonalEfficiency).toFixed(2);
+    }
+
+    public get getTotalProgress() {
+        return (this.stats.TotalProgress*100).toFixed(0)
     }
 
     public get getMaxTitle():string {
         
         let id = Number.parseInt(this.maxTaskNum)+1;
         return this.newTask.Title+id;
+    }
+
+    public goalPush() {
+        router.push("/")
     }
 
     public isAddGoalBlock: boolean = false;
@@ -39,6 +52,30 @@ export default class Board extends Vue {
     public clickGoals(goal: Goal) {
         router.push(`/goals/${goal.Id}`);
         // alert(a.id);
+    }
+
+    public async setDoneTask(task: Task) {
+        await fetch(`https://localhost:5050/api/tasks/putdone/${task.Id}`, { 
+            method: 'PUT',
+        })
+        fetch(`https://localhost:5050/api/tasks/taskstatus/${this.goalId}/work`, { method: 'GET' })
+            .then(response => response.json())
+            .then((data) => {
+                    // this.ser(data)
+                    // console.log(this.response)
+                // console.log(data)    
+                this.todoList = data;
+                    // console.log(this.todoTasks)
+            })
+        fetch(`https://localhost:5050/api/tasks/taskstatus/${this.goalId}/done`, { method: 'GET' })
+            .then(response => response.json())
+            .then((data) => {
+                    // this.ser(data)
+                    // console.log(this.response)
+                // console.log(data)    
+                this.doneTodoList = data;
+                    // console.log(this.tod
+            })
     }
 
     public async addTaskBlockOpen() {
