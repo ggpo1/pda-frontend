@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="ts" src="./Boards.ts" />
+<script lang="ts" src="./Goals.ts" />
 
 <style scoped>
 .boards-wrapper {

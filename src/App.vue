@@ -5,6 +5,7 @@
       <div class="main-wrapper">
         <router-view/>
       </div>
+      <Sidebar/>
     </div>
   </div>
 </template>
@@ -38,6 +39,7 @@ html, body {
 
 .main-wrapper {
   width: 100%;
+  overflow: auto;
 }
 
 .center-horizontal {
@@ -46,4 +48,6 @@ html, body {
   height: 100%;
   /* margin-top: 100px; */
 }
+
+
 </style>
